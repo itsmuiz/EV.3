@@ -28,13 +28,21 @@ const header = document.querySelector('header');
 hamburger.addEventListener('click', () => {
     header.classList.toggle('nav-open');
 });
+const productName = document.getElementById('productName').innerText;
+const productPrice = document.getElementById('productPrice').innerText;
 
 
 function sendWhatsAppMessage(productName, productPrice, productDetails) {
+    
     const phoneNumber = '918750704927'; // Replace with your WhatsApp number in international format without the plus sign
     const message = `Hello, I would like to add the following product to my cart:\n\nProduct: ${productName}\nPrice: ${productPrice}\nDetails: ${productDetails}`;
-    
+
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
-  }
-  
+
+    document.getElementById('seeAllBtn').addEventListener('click', function () {
+        window.location.href =`https://wa.me/c/${phoneNumber}`;
+    });
+
+}
+

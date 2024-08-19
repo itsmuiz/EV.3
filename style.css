@@ -11,12 +11,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 button {
@@ -57,6 +61,7 @@ header nav ul li a:hover {
 }
 
 header .cart {
+    margin-right: 20px;
     cursor: pointer;
     background-color: var(--accent-color);
     padding: 10px 20px;
@@ -115,12 +120,30 @@ header .cart:hover {
 .products {
     padding: 50px 20px;
     background-color: #fff;
+    position: relative;
 }
+
 
 .products h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 36px;
+}
+.see-all-btn {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    color: var(--accent-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.see-all-btn:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
 }
 
 .product-grid {
@@ -136,7 +159,9 @@ header .cart:hover {
 .product-item {
     width: 200px; /* Ensure the width of each item matches the column size */
     height: 300px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -148,21 +173,29 @@ header .cart:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-.product-item img {
-    max-width: 100%;
-    max-height: 60%;  /* Adjust image height to fit within the card */
+.p-img{
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
+}
+
+.product-item .p-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    /* border-radius: 20px; */
     margin-bottom: 20px;
 }
 
 .product-item h3 {
+    padding-top: 10px;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 14px;
 }
 
 .product-item p {
-    font-size: 20px;
+    font-size: 12px;
     color: var(--accent-color);
     margin-bottom: 20px;
 }
@@ -235,6 +268,9 @@ footer ul li a:hover {
     }
 
     .address-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
     }
 
@@ -281,9 +317,7 @@ footer ul li a:hover {
 
 .address-content {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 .address-map {
@@ -295,14 +329,16 @@ footer ul li a:hover {
 }
 
 .address-info {
-    flex: 1;
+    padding: 10px 40px;
     max-width: 50%;
     min-width: 300px;
     text-align: left;
+    text-wrap: balance;
 }
 
 .address-info p {
     margin-bottom: 10px;
+    text-wrap: balance;
 }
 
 .address-info a {
@@ -319,6 +355,7 @@ footer ul li a:hover {
     padding: 50px 10px;
     background-color: #f4f4f4;
     text-align: center;
+    overflow: hidden;
 }
 
 .about-us h2 {

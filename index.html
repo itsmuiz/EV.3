@@ -21,7 +21,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="cart"><i class="fas fa-shopping-cart"></i> Cart (0)</div>
+        <div class="cart" onclick=""><i class="fas fa-shopping-cart"></i> Cart</div>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </header>
 
@@ -29,63 +29,72 @@
     <section id="home" class="hero">
         <h1 class="animate-on-scroll">Welcome to EV Solution</h1>
         <p>Your one-stop shop for electric vehicle solutions</p>
-        <a href="#products" class="btn">Shop Now</a>
+        <a href="https://wa.me/c/918750704927" class="btn" id="seeAllBtn">Shop Now</a>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="products">
         <h2>Our Products</h2>
 
+        <!-- <a id="seeAllBtn" class="see-all-btn" target="_blank">See All</a> -->
+
         <div class="product-grid">
+
             <div class="product-item animate-on-scroll">
-                <img src="https://via.placeholder.com/150" alt="Product">
-                <h3>Product</h3>
-                <p>$29.99</p><button class="btn"
+                <div class="p-img">
+                    <img src="./img/charger2.jpg" alt="Product">
+                </div>
+                <h3 id="productName">72V-3A (IMP)</h3>
+                <p id="productPrice">&#8377; 990.00</p>
+                <button class="btn"
                     onclick="sendWhatsAppMessage('Product Name', 'Product Price', 'Product Details')">
                     Add to Cart
                 </button>
             </div>
 
             <div class="product-item animate-on-scroll">
-                <img src="https://via.placeholder.com/150" alt="Product">
-                <h3>Product</h3>
-                <p>$29.99</p><button class="btn"
+                <div class="p-img">
+                    <img src="./img/charger3.jpg" alt="Product">
+                </div>
+                <h3 id="productName">60V-4A (IMP)</h3>
+                <p id="productPrice">&#8377; 1,050.00</p>
+                <button class="btn"
                     onclick="sendWhatsAppMessage('Product Name', 'Product Price', 'Product Details')">
                     Add to Cart
                 </button>
             </div>
 
             <div class="product-item animate-on-scroll">
-                <img src="https://via.placeholder.com/150" alt="Product">
-                <h3>Product</h3>
-                <p>$29.99</p><button class="btn"
+                <div class="p-img">
+                    <img src="./img/charger5.jpg" alt="Product">
+                </div>
+                <h3 id="productName">48V-3A (IN)</h3>
+                <p id="productPrice">&#8377; 1,500.00</p>
+                <button class="btn"
                     onclick="sendWhatsAppMessage('Product Name', 'Product Price', 'Product Details')">
                     Add to Cart
                 </button>
             </div>
 
             <div class="product-item animate-on-scroll">
-                <img src="https://via.placeholder.com/150" alt="Product">
-                <h3>Product</h3>
-                <p>$29.99</p><button class="btn"
+                <div class="p-img">
+                    <img src="./img/connector1.jpg" alt="Product">
+                </div>
+                <h3 id="productName">3 pin connecter (10 pc pack)</h3>
+                <p id="productPrice">#8377; 56.00 (1pc)</p>
+                <button class="btn"
                     onclick="sendWhatsAppMessage('Product Name', 'Product Price', 'Product Details')">
                     Add to Cart
                 </button>
             </div>
 
             <div class="product-item animate-on-scroll">
-                <img src="https://via.placeholder.com/150" alt="Product">
-                <h3>Product</h3>
-                <p>$29.99</p><button class="btn"
-                    onclick="sendWhatsAppMessage('Product Name', 'Product Price', 'Product Details')">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="product-item animate-on-scroll">
-                <img src="https://via.placeholder.com/150" alt="Product">
-                <h3>Product</h3>
-                <p>$29.99</p><button class="btn"
+                <div class="p-img">
+                    <img src="./img/connector2.jpg" alt="Product">
+                </div>
+                <h3 id="productName">MALE W/D WIRE(5pc pack)</h3>
+                <p id="productPrice">&#8377; 608.00</p>
+                <button class="btn"
                     onclick="sendWhatsAppMessage('Product Name', 'Product Price', 'Product Details')">
                     Add to Cart
                 </button>
@@ -129,7 +138,6 @@
             </div>
 
             <div>
-                <p>Email: <a href="mailto:electricvehiclesolutionss@gmail.com">electricvehiclesolutionss@gmail.com</a>
                 </p>
                 <p>Phone: +91 87507 04927</p>
                 <p>YouTube Channel: <a href="https://www.youtube.com/@evehicledelhi" target="_blank">Electric vehicle
